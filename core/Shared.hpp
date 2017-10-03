@@ -7,6 +7,8 @@
 //
 #pragma once
 #include <cstdlib>
+#include <initializer_list>
+
 using i64 = long long;
 
 template<typename T>

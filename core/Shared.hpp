@@ -6,6 +6,7 @@
 //  Copyright © 2017 Armin Hamar. All rights reserved.
 //
 #pragma once
+#include <cstdlib>
 using i64 = long long;
 
 template<typename T>
@@ -68,5 +69,11 @@ Shared<T> make_shared(i64 count)
 template<typename T>
 Shared<T> make_shared(std::initializer_list<T> init_list)
 {
-    
-}
+    T* begin = (T*)calloc(init_list.size(),*init_list.begin());
+    for(const T& e : init_list)
+    {
+        *begin++ = e;
+    }
+    begin = begin - init_list.size();
+    return Shared<T>(begin);
+};

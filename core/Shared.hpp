@@ -64,3 +64,9 @@ Shared<T> make_shared(i64 count)
 {
     return Shared<T>( (T*)calloc(count,sizeof(T)) );
 }
+
+template<typename T>
+Shared<T> make_shared(std::initializer_list<T> init_list)
+{
+    
+}

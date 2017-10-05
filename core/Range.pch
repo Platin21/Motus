@@ -19,11 +19,25 @@ template <typename T>
 class Range {
     Range_info<T> info;
 public:
-    Range(T* begin,i64 size)
+    Range(T* begin,i64&& size)
     {
         info = Range_info<T>();
         info.begin = begin;
         info.size = size;
+    }
+    
+    Range(T* begin,i64& size)
+    {
+        info = Range_info<T>();
+        info.begin = begin;
+        info.size = size;
+    }
+    
+    Range(T* begin,T* end)
+    {
+        info = Range_info<T>();
+        info.begin = begin;
+        info.size = (i64)(end - begin);
     }
     
     inline bool is_elment_valid_at(i64 position)
@@ -71,12 +85,29 @@ public:
         return get();
     }
     
+    inline Range<T> subrange(i64 offset_begin,i64 offset_end)
+    {
+        if(offset_end >= info.size)
+            return Range<T>((info.begin+offset_begin),info.size);
+        
+        return Range<T>((info.begin+offset_begin),offset_end);
+    }
+    
     inline T peek()
     {
         if(is_elment_valid_at(1))
-        {
             return get_at(1);
-        }
+        
         return get();
+    }
+    
+    T* begin()
+    {
+        return info.begin;
+    }
+    
+    T* end()
+    {
+        return info.begin + info.size;
     }
 };

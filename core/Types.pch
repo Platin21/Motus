@@ -3,3 +3,4 @@
 // @a Armin Hamar
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
 
+// function_return_type(*Pointer_name)(function argument list)

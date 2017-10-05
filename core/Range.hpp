@@ -1,11 +1,10 @@
-//
-//  Range.hpp
-//  core
-//
-//  Created by Armin Hamar on 04.10.17.
-//  Copyright © 2017 Armin Hamar. All rights reserved.
-//
+// @v 1.2.0
+// @n Motus_Lib
+// @a Armin Hamar
 #pragma once
+#include <cstdlib>
+
+// @t i64 64bit type
 using i64 = long long;
 
 template<T>
@@ -18,10 +17,10 @@ struct Range_info
 
 template <T>
 class Range {
-    Range_info* info;
+    Range_info<T>* info;
 public:
     Range(T* begin,i64 size)
     {
-        
+        info = (T*)calloc();
     }
 };

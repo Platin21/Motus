@@ -1,9 +1,12 @@
-//
-//  UT_Instance.cpp
-//  core
-//
-//  Created by Armin Hamar on 07.10.17.
-//  Copyright © 2017 Armin Hamar. All rights reserved.
-//
+// @u Simple Tests
+#include "UT_Range.hpp"
+#include "UT_Shared.hpp"
+#include "UT_Unique.hpp"
 
-#include <stdio.h>
+int main()
+{
+    UT_Unique();
+    UT_Shared();
+    UT_Range();
+}
+

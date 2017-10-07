@@ -64,22 +64,22 @@ public:
         }
     }
     
-    inline T& get_at(i64& position)
+    inline const T& get_at(i64& position)
     {
         return *(info.begin + position);
     }
     
-    inline T& get_at(i64&& position)
+    inline const T& get_at(i64&& position)
     {
         return *(info.begin + position);
     }
     
-    inline T& get()
+    inline const T& get()
     {
         return *info.begin;
     }
     
-    inline T& get_next()
+    inline const T& get_next()
     {
         move_forward(1);
         return get();
@@ -93,7 +93,7 @@ public:
         return Range<T>((info.begin+offset_begin),offset_end);
     }
     
-    inline T peek()
+    inline const T& peek()
     {
         if(is_elment_valid_at(1))
             return get_at(1);

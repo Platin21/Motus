@@ -10,13 +10,13 @@
 #undef TEST
 #define TEST(METHOD) if(!METHOD())
 
-bool UT_basic_init()
+bool UT_shared_basic_init()
 {
     auto i = Shared<int>( (int*)malloc(sizeof(int) * 20) );
     return true;
 }
 
-bool UT_get_refrence()
+bool UT_shared_get_refrence()
 {
    auto i = Shared<int>(  (int*)malloc(sizeof(int) * 20) );
    if(i.ref())
@@ -51,12 +51,12 @@ bool UT_make_shared_list()
 
 void UT_Shared()
 {
-    TEST(UT_basic_init)
+    TEST(UT_shared_basic_init)
     {
         assert(false);
     }
     
-    TEST(UT_get_refrence)
+    TEST(UT_shared_get_refrence)
     {
         assert(false);
     }

@@ -8,9 +8,18 @@
 #undef TEST
 #define TEST(METHOD) if(!METHOD())
 
+bool UT_unique_basic_init()
+{
+   
+    return true;
+}
+
 void UT_Unique()
 {
-    
+    TEST(UT_unique_basic_init)
+    {
+        assert(false);
+    }
 }
 
 #endif

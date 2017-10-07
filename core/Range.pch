@@ -11,16 +11,15 @@
 // @t i64 64bit type
 using i64 = long long;
 
-// @s represents the range in memmory
-template<typename T>
-struct Range_info
-{
-    i64 size; 
-    T *begin;
-};
-
 template <typename T>
 class Range {
+    // @s represents the range in memmory
+    template<typename TX>
+    struct Range_info
+    {
+        i64 size;
+        TX *begin;
+    };
     Range_info<T> info;
 public:
     Range(T* begin,i64&& size)

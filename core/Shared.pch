@@ -6,6 +6,10 @@
 #include <cstdlib>
 #include <initializer_list>
 
+// Header
+#define VERSION_1_1_0
+// Header
+
 using i64 = long long;
 
 template<typename T>

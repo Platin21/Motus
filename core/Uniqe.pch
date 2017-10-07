@@ -5,6 +5,10 @@
 #pragma once
 #include <cstdlib>
 
+// Header
+#define VERSION_1_4_0
+// Header
+
 template<typename T>
 class Unique
 {

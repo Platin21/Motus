@@ -45,14 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8AD41FB21F89060F00AA97AD /* Tests */ = {
+		8AD41FB21F89060F00AA97AD /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				8AD41FB31F89066F00AA97AD /* UT_Shared.hpp */,
 				8AD41FB41F8906B200AA97AD /* UT_Unique.hpp */,
 				8AD41FB51F8906D600AA97AD /* UT_Range.hpp */,
 			);
-			path = Tests;
+			path = Test;
 			sourceTree = "<group>";
 		};
 		8ADAD6291F817D940041D98B = {
@@ -74,7 +74,7 @@
 		8ADAD6341F817D940041D98B /* core */ = {
 			isa = PBXGroup;
 			children = (
-				8AD41FB21F89060F00AA97AD /* Tests */,
+				8AD41FB21F89060F00AA97AD /* Test */,
 				8ADAD6351F817D940041D98B /* main.cpp */,
 				8AEEC3C41F840307008EC951 /* Shared.pch */,
 				8A5BB5FA1F858AC400511910 /* Range.pch */,

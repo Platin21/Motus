@@ -9,6 +9,16 @@
 #define TEST(METHOD) if(!METHOD())
 
 // Add the Other tests
+/*
+ inline Range<T> subrange(i64 offset_begin,i64 offset_end)
+ inline const T& get_next()
+ inline const T& get()
+ inline const T& get_at(i64&& position)
+ inline const T& get_at(i64& position)
+ inline void move_forward(i64&& by_elements)
+ inline void move_forward(i64& by_elements)
+ inline bool is_elment_valid_at(i64 position)
+*/
 
 bool UT_Range_init()
 {

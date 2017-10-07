@@ -1,0 +1,49 @@
+//
+//  Uniqe.pch
+//  core
+//
+//  Created by Armin Hamar on 07.10.17.
+//  Copyright © 2017 Armin Hamar. All rights reserved.
+//
+#pragma once
+#include <cstdlib>
+
+template<typename T>
+class Unique
+{
+    T* ptr;
+public:
+    Unique(T* raw_memory)
+    {
+        ptr = raw_memory;
+    }
+    
+    T* ref() const
+    {
+        return ptr;
+    }
+    
+    ~Unique()
+    {
+        free(ptr);
+    }
+};
+
+template<typename T>
+Unique<T> make_unique(i64 count)
+{
+    return Unique<T>( (T*)calloc(count,sizeof(T)) );
+};
+
+template<typename T>
+Unique<T> make_unique(std::initializer_list<T> init_list)
+{
+    T* begin = (T*)calloc(init_list.size(),*init_list.begin());
+    for(const T& e : init_list)
+    {
+        *begin++ = e;
+    }
+    begin = begin - init_list.size();
+    return Unique<T>(begin);
+};
+

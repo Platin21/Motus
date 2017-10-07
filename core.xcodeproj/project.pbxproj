@@ -26,6 +26,9 @@
 		8A5BB5FA1F858AC400511910 /* Range.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Range.pch; sourceTree = "<group>"; };
 		8AB8FE041F86B825004DF71F /* Types.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.pch; sourceTree = "<group>"; };
 		8AD41FB11F88FF1500AA97AD /* Uniqe.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Uniqe.pch; sourceTree = "<group>"; };
+		8AD41FB31F89066F00AA97AD /* UT_Shared.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Shared.hpp; sourceTree = "<group>"; };
+		8AD41FB41F8906B200AA97AD /* UT_Unique.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Unique.hpp; sourceTree = "<group>"; };
+		8AD41FB51F8906D600AA97AD /* UT_Range.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Range.hpp; sourceTree = "<group>"; };
 		8ADAD6321F817D940041D98B /* core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = core; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADAD6351F817D940041D98B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8AEEC3C41F840307008EC951 /* Shared.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.pch; sourceTree = "<group>"; };
@@ -42,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AD41FB21F89060F00AA97AD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8AD41FB31F89066F00AA97AD /* UT_Shared.hpp */,
+				8AD41FB41F8906B200AA97AD /* UT_Unique.hpp */,
+				8AD41FB51F8906D600AA97AD /* UT_Range.hpp */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		8ADAD6291F817D940041D98B = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 		8ADAD6341F817D940041D98B /* core */ = {
 			isa = PBXGroup;
 			children = (
+				8AD41FB21F89060F00AA97AD /* Tests */,
 				8ADAD6351F817D940041D98B /* main.cpp */,
 				8AEEC3C41F840307008EC951 /* Shared.pch */,
 				8A5BB5FA1F858AC400511910 /* Range.pch */,

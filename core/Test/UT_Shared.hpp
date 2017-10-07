@@ -43,10 +43,10 @@ bool UT_make_shared_list()
     auto e = make_shared<int>({1,2,3,4,5,6,7,8,9,10});
     if(*e.ref() == 1)
     {
-        return false;
+        return true;
     }
     
-    return true;
+    return false;
 }
 
 void UT_Shared()

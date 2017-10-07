@@ -8,5 +8,9 @@
 #undef TEST
 #define TEST(METHOD) if(!METHOD())
 
+void UT_Range()
+{
+    
+}
 
 #endif

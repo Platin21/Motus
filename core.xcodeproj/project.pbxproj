@@ -41,7 +41,6 @@
 		8AD41FB51F8906D600AA97AD /* UT_Range.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Range.hpp; sourceTree = "<group>"; };
 		8AD41FB61F89181400AA97AD /* UT_Instance.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UT_Instance.cpp; sourceTree = "<group>"; };
 		8AD41FBB1F8919A500AA97AD /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AD41FBD1F8919A500AA97AD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8ADAD6321F817D940041D98B /* Build */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Build; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADAD6351F817D940041D98B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8AEEC3C41F840307008EC951 /* Shared.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.pch; sourceTree = "<group>"; };
@@ -76,19 +75,10 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
-		8AD41FBC1F8919A500AA97AD /* UT_Test */ = {
-			isa = PBXGroup;
-			children = (
-				8AD41FBD1F8919A500AA97AD /* main.cpp */,
-			);
-			path = UT_Test;
-			sourceTree = "<group>";
-		};
 		8ADAD6291F817D940041D98B = {
 			isa = PBXGroup;
 			children = (
 				8ADAD6341F817D940041D98B /* core */,
-				8AD41FBC1F8919A500AA97AD /* UT_Test */,
 				8ADAD6331F817D940041D98B /* Products */,
 			);
 			sourceTree = "<group>";

@@ -49,6 +49,19 @@ bool UT_make_shared_list()
     return false;
 }
 
+bool UT_shared_test_refs_part1(Shared<int> i)
+{
+    if(i.getRefCount() >= 0) return true;
+    
+    return false;
+}
+
+bool UT_shared_test_refs()
+{
+  auto e = make_shared<int>(20);
+    return UT_shared_test_refs_part1(e);
+}
+
 void UT_Shared()
 {
     TEST(UT_shared_basic_init)
@@ -67,6 +80,11 @@ void UT_Shared()
     }
     
     TEST(UT_make_shared_list)
+    {
+        assert(false);
+    }
+    
+    TEST(UT_shared_test_refs)
     {
         assert(false);
     }

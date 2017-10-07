@@ -64,22 +64,22 @@ public:
         }
     }
     
-    inline T get_at(i64& position)
+    inline T& get_at(i64& position)
     {
         return *(info.begin + position);
     }
     
-    inline T get_at(i64&& position)
+    inline T& get_at(i64&& position)
     {
         return *(info.begin + position);
     }
     
-    inline T get()
+    inline T& get()
     {
         return *info.begin;
     }
     
-    inline T get_next()
+    inline T& get_next()
     {
         move_forward(1);
         return get();

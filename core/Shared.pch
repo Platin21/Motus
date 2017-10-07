@@ -39,12 +39,6 @@ public:
         ptr = type_info->origin;
     }
     
-    Shared(Shared<T>&& shared)
-    {
-        type_info = shared.type_info;
-        type_info->refs += 1;
-        ptr = type_info->origin;
-    }
     
     ~Shared()
     {

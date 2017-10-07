@@ -5,7 +5,7 @@
 #pragma once
 
 // Header
-#define VERSION_1_2_0
+#define MT_VERSION_1_2_0
 // Header
 
 // @t i64 64bit type

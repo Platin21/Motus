@@ -5,6 +5,11 @@
 #include "Uniqe.pch"
 #include "Types.pch"
 
+// Unittests
+#include "Test/UT_Shared.hpp"
+#include "Test/UT_Range.hpp"
+#include "Test/UT_Unique.hpp"
+
 using i64 = long long;
 
 int main(int argc, const char * argv[])

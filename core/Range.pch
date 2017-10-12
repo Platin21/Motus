@@ -93,7 +93,7 @@ public:
         if(offset_end >= info.size)
             return Range<T>((info.begin+offset_begin),info.size);
         
-        return Range<T>((info.begin+offset_begin),offset_end);
+        return Range<T>((info.begin+offset_begin),info.size - offset_end);
     }
     
     inline const T& peek()

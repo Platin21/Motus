@@ -10,7 +10,6 @@
 
 // Add the Other tests
 /*
- inline Range<T> subrange(i64 offset_begin,i64 offset_end)
  inline const T& get_next()
  inline const T& get()
  inline const T& get_at(i64&& position)
@@ -39,6 +38,16 @@ bool UT_Range_peek()
     return false;
 }
 
+bool UT_Range_sub()
+{
+    int it_rng[] = {1,2,3,4,5};
+    auto rng = Range<int>(&it_rng[0],5);
+    auto sbn_rng = rng.subrange(1,-1);
+    if(sbn_rng.get() == 2) return true;
+    
+    return false;
+}
+
 void UT_Range()
 {
     TEST(UT_Range_init)
@@ -47,6 +56,11 @@ void UT_Range()
     }
     
     TEST(UT_Range_peek)
+    {
+        assert(false);
+    }
+    
+    TEST(UT_Range_sub)
     {
         assert(false);
     }

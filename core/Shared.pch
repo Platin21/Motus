@@ -36,27 +36,21 @@ public:
         return type_info->refs;
     }
     
-    i64& getRefCounter()
+    i64& getRefCounter() const
     {
         return type_info->refs;
     }
     
-    Shared(T* raw_memory)
+    Shared(void* raw_memory)
     {
-        type_info = (Shared_Info<T>*)calloc(1,sizeof(type_info));
-        type_info->origin = raw_memory;
+        type_info = (Shared_Info<T>*)malloc(sizeof(type_info));
+        type_info->origin = (T*)raw_memory;
+        type_info->refs = 0;
         ptr = type_info->origin;
     }
     
     
-    Shared(Shared<T>& shr)
-    {
-        this->type_info->origin = shr.ref();
-        this->type_info->refs   = shr.getRefCounter();
-        this->type_info->refs   += 1;
-    }
-    
-    Shared(Shared<T>&& shr)
+    Shared(const Shared<T>& shr)
     {
         this->type_info->origin = shr.ref();
         this->type_info->refs   = shr.getRefCounter();
@@ -79,13 +73,13 @@ public:
 template<typename T>
 Shared<T> make_shared(i64 count)
 {
-    return Shared<T>( (T*)calloc(count,sizeof(T)) );
+    return Shared<T>( malloc(sizeof(T)*count) );
 }
 
 template<typename T>
 Shared<T> make_shared(std::initializer_list<T> init_list)
 {
-    T* begin = (T*)calloc(init_list.size(),*init_list.begin());
+    T* begin = (T*)malloc(sizeof(init_list.begin()) * init_list.size());
     for(const T& e : init_list)
     {
         *begin++ = e;

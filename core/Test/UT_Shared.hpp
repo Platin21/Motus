@@ -59,7 +59,8 @@ bool UT_shared_test_refs_part1(Shared<int> i)
 bool UT_shared_test_refs()
 {
   auto e = make_shared<int>(20);
-    return UT_shared_test_refs_part1(e);
+  
+  return UT_shared_test_refs_part1(e);
 }
 
 void UT_Shared()

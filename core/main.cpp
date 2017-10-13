@@ -9,10 +9,10 @@
 int main(int argc, const char * argv[])
 {
     i64 number = 0;
-    printf("Typein number to count decimals:");
+    printf("Type in number to count decimals:");
     scanf("%lld",&number);
-    i64 count = CountOfDecimalCharsIn_i64(number);
-    printf("%lld\n",count);
+    i16 count = DecimalsOf<i16>(number);
+    printf("%d\n",count);
     
     return 0;
 }

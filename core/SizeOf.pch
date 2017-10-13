@@ -40,7 +40,3 @@ T DecimalsOf(T&& numberToCountDigits)
     
     return 0;
 };
-
-#define DecimalsOfI64(number) DecimalsOf<i64>(number)
-#define DecimalsOfI32(number) DecimalsOf<i32>(number)
-#define DecimalsOfI16(number) DecimalsOf<i16>(number)

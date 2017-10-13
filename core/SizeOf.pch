@@ -1,5 +1,13 @@
+// @v 1.5.0
+// @n Motus Lib
+// @a Armin Hamar
+// @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
 #pragma once
 #include "Types.pch"
+
+// Header
+#define MT_VERSION_1_5_0
+// Header
 
 template<typename T>
 T DecimalsOf(T& numberToCountDigits)

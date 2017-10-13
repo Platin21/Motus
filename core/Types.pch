@@ -2,6 +2,7 @@
 // @n Motus Lib
 // @a Armin Hamar
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
+#pragma once
 
 using i64 = long long;
 using i32 = long;
@@ -12,3 +13,13 @@ using f64 = double;
 using f32 = float;
 
 using Char = char;
+
+constexpr long long i64_max = 9223372036854775807;
+constexpr long i32_max = 4294967295;
+constexpr short i16_max = 32767;
+constexpr char i8_max  = 127;
+
+constexpr long long i64_min = -9223372036854775807;
+constexpr long i32_min = -2147483648;
+constexpr short i16_min = -32768;
+constexpr char i8_min  = -128;

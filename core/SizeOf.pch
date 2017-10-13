@@ -1,0 +1,46 @@
+#pragma once
+#include "Types.pch"
+
+i64 SizeOfDecimalFromBigNumber(i64& bigNumber)
+{
+    return 0;
+}
+
+i64 CountOfDecimalCharsIn_i64(i64& numberToCountDigits)
+{
+    if(numberToCountDigits < 10) return 1;
+    
+    if(numberToCountDigits < 100) return 2;
+    
+    if(numberToCountDigits < 1000) return 3;
+    
+    if(numberToCountDigits < 10000) return 4;
+    
+    if(numberToCountDigits < 100000) return 5;
+    
+    if(numberToCountDigits < 1000000) return 6;
+    
+    if(numberToCountDigits > 1000000) return CountOfDecimalCharsIn_i64(numberToCountDigits /= 1000000) + 6;
+    
+    return 0;
+};
+
+i64 CountOfDecimalCharsIn_i64(i64&& numberToCountDigits)
+{
+    if(numberToCountDigits < 10) return 1;
+    
+    if(numberToCountDigits < 100) return 2;
+    
+    if(numberToCountDigits < 1000) return 3;
+    
+    if(numberToCountDigits < 10000) return 4;
+    
+    if(numberToCountDigits < 100000) return 5;
+    
+    if(numberToCountDigits < 1000000) return 6;
+    
+    if(numberToCountDigits > 1000000) return CountOfDecimalCharsIn_i64(numberToCountDigits /= 1000000) + 6;
+    
+    return 0;
+};
+

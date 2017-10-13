@@ -1,12 +1,8 @@
 #pragma once
 #include "Types.pch"
 
-i64 SizeOfDecimalFromBigNumber(i64& bigNumber)
-{
-    return 0;
-}
-
-i64 CountOfDecimalCharsIn_i64(i64& numberToCountDigits)
+template<typename T>
+T DecimalsOf(T& numberToCountDigits)
 {
     if(numberToCountDigits < 10) return 1;
     
@@ -20,12 +16,13 @@ i64 CountOfDecimalCharsIn_i64(i64& numberToCountDigits)
     
     if(numberToCountDigits < 1000000) return 6;
     
-    if(numberToCountDigits > 1000000) return CountOfDecimalCharsIn_i64(numberToCountDigits /= 1000000) + 6;
+    if(numberToCountDigits > 1000000) return DecimalsOf<T>(numberToCountDigits /= 1000000) + 6;
     
     return 0;
 };
 
-i64 CountOfDecimalCharsIn_i64(i64&& numberToCountDigits)
+template<typename T>
+T DecimalsOf(T&& numberToCountDigits)
 {
     if(numberToCountDigits < 10) return 1;
     
@@ -39,8 +36,11 @@ i64 CountOfDecimalCharsIn_i64(i64&& numberToCountDigits)
     
     if(numberToCountDigits < 1000000) return 6;
     
-    if(numberToCountDigits > 1000000) return CountOfDecimalCharsIn_i64(numberToCountDigits /= 1000000) + 6;
+    if(numberToCountDigits > 1000000) return DecimalsOf<T>(numberToCountDigits /= 1000000) + 6;
     
     return 0;
 };
 
+#define DecimalsOfI64(number) DecimalsOf<i64>(number)
+#define DecimalsOfI32(number) DecimalsOf<i32>(number)
+#define DecimalsOfI16(number) DecimalsOf<i16>(number)

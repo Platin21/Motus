@@ -9,7 +9,7 @@
 #define MT_VERSION_1_6_0
 // Header
 
-i64 powerOf10(i8 exponent)
+i64 PowerOf10(i8 exponent)
 {
     switch(exponent)
     {

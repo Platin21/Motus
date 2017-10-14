@@ -4,6 +4,7 @@
 #include "UT_Range.hpp"
 #include "UT_Unique.hpp"
 #include "UT_DecimalsOf.hpp"
+#include "UT_PowerOf10.hpp"
 
 int main()
 {
@@ -11,5 +12,6 @@ int main()
     UT_Shared();
     UT_Range();
     UT_DecimalsOf();
+    UT_PowerOf10();
 }
 

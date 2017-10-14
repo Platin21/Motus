@@ -18,12 +18,12 @@ using f32 = float;
 
 using Char = char;
 
-constexpr long long i64_max = 9223372036854775807;
-constexpr long i32_max = 4294967295;
-constexpr short i16_max = 32767;
-constexpr char i8_max  = 127;
+#define MAX_i64  9223372036854775807
+#define MAX_i32  4294967295
+#define MAX_i16  32767
+#define MAX_i8   127
 
-constexpr long long i64_min = -9223372036854775807;
-constexpr long i32_min = -2147483648;
-constexpr short i16_min = -32768;
-constexpr char i8_min  = -128;
+#define MIN_i64  -9223372036854775807
+#define MIN_i32  -2147483648
+#define MIN_i16  -32768
+#define MIN_i8   -128

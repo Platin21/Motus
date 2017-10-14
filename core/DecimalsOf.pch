@@ -10,9 +10,9 @@
 // Header
 
 template<typename T>
-T DecimalsOf(T numberToCountDigits)
+short DecimalsOf(T numberToCountDigits)
 {
-    i64 digits = 0;
+    short digits = 0;
     while(true)
     {
         if(numberToCountDigits < 10) return digits + 1;

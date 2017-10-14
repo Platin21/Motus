@@ -12,13 +12,13 @@
 
 bool UT_shared_basic_init()
 {
-    auto i = Shared<int>( (int*)malloc(sizeof(int) * 20) );
+    auto i = Shared<int>( (int*)malloc(sizeof(int) * 20),20);
     return true;
 }
 
 bool UT_shared_get_refrence()
 {
-   auto i = Shared<int>(  (int*)malloc(sizeof(int) * 20) );
+   auto i = Shared<int>(  (int*)malloc(sizeof(int) * 20),20);
    if(i.ref())
    {
        return true;

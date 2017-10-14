@@ -35,9 +35,9 @@ public:
         return type_info->refs;
     }
     
-    i64& getRefCounter() const
+    Shared_Info<T>* getTypInfo() const
     {
-        return type_info->refs;
+        return type_info;
     }
     
     Shared(void* raw_memory)
@@ -52,7 +52,7 @@ public:
     Shared(const Shared<T>& shr)
     {
         this->type_info->origin = shr.ref();
-        this->type_info->refs   = shr.getRefCounter();
+        this->type_info = shr.getTypInfo();
         this->type_info->refs   += 1;
     }
     

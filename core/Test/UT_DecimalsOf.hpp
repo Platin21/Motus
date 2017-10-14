@@ -3,7 +3,7 @@
 // @n Motus_Lib
 // @a Armin Hamar
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
-#include "SizeOf.pch"
+#include "DecimalsOf.pch"
 #ifdef MT_VERSION_1_5_0
 #undef TEST
 #define TEST(METHOD) if(!METHOD())
@@ -29,7 +29,7 @@ bool UT_decimals_i64()
     return true;
 }
 
-void UT_Sizeof()
+void UT_DecimalsOf()
 {
     TEST(UT_decimals_ref_i64)
     {

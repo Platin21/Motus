@@ -33,8 +33,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A52878E1F91337800570312 /* SizeOf.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeOf.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
-		8A52878F1F9163B900570312 /* UT_Sizeof.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Sizeof.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A479E621F9210080086A9E0 /* PowerOf10.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PowerOf10.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A479E631F92264A0086A9E0 /* UT_PowerOf10.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_PowerOf10.hpp; sourceTree = "<group>"; };
+		8A52878E1F91337800570312 /* DecimalsOf.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecimalsOf.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A52878F1F9163B900570312 /* UT_DecimalsOf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_DecimalsOf.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A5BB5FA1F858AC400511910 /* Range.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Range.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8AB8FE041F86B825004DF71F /* Types.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8AD41FB11F88FF1500AA97AD /* Unique.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unique.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
@@ -72,7 +74,8 @@
 				8AD41FB31F89066F00AA97AD /* UT_Shared.hpp */,
 				8AD41FB41F8906B200AA97AD /* UT_Unique.hpp */,
 				8AD41FB51F8906D600AA97AD /* UT_Range.hpp */,
-				8A52878F1F9163B900570312 /* UT_Sizeof.hpp */,
+				8A52878F1F9163B900570312 /* UT_DecimalsOf.hpp */,
+				8A479E631F92264A0086A9E0 /* UT_PowerOf10.hpp */,
 				8AD41FB61F89181400AA97AD /* UT_Instance.cpp */,
 			);
 			path = Test;
@@ -100,7 +103,8 @@
 			children = (
 				8AD41FB21F89060F00AA97AD /* Test */,
 				8ADAD6351F817D940041D98B /* main.cpp */,
-				8A52878E1F91337800570312 /* SizeOf.pch */,
+				8A479E621F9210080086A9E0 /* PowerOf10.pch */,
+				8A52878E1F91337800570312 /* DecimalsOf.pch */,
 				8AEEC3C41F840307008EC951 /* Shared.pch */,
 				8A5BB5FA1F858AC400511910 /* Range.pch */,
 				8AB8FE041F86B825004DF71F /* Types.pch */,

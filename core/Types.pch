@@ -27,3 +27,13 @@ using Char = char;
 #define MIN_i32  -2147483648
 #define MIN_i16  -32768
 #define MIN_i8   -128
+
+
+#ifdef MT_SPECIAL_DEF
+#define func auto
+#define $ T
+#define typed template<typename T>
+#define strc class
+#define var  auto
+#define let  const auto
+#endif

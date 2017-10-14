@@ -22,6 +22,7 @@ private:
     {
         TX* origin;
         i64 refs;
+        i64 size;
     };
     Shared_Info<T>* type_info;
 public:
@@ -40,14 +41,23 @@ public:
         return type_info;
     }
     
-    Shared(void* raw_memory)
+    Shared(void* raw_memory,i64& size)
     {
         type_info = (Shared_Info<T>*)malloc(sizeof(type_info));
         type_info->origin = (T*)raw_memory;
         type_info->refs = 0;
+        type_info->size = size;
         ptr = type_info->origin;
     }
     
+    Shared(void* raw_memory,i64&& size)
+    {
+        type_info = (Shared_Info<T>*)malloc(sizeof(type_info));
+        type_info->origin = (T*)raw_memory;
+        type_info->refs = 0;
+        type_info->size = size;
+        ptr = type_info->origin;
+    }
     
     Shared(const Shared<T>& shr)
     {
@@ -72,7 +82,7 @@ public:
 template<typename T>
 Shared<T> make_shared(i64 count)
 {
-    return Shared<T>( malloc(sizeof(T)*count) );
+    return Shared<T>( malloc(sizeof(T)*count),count);
 }
 
 template<typename T>
@@ -84,5 +94,6 @@ Shared<T> make_shared(std::initializer_list<T> init_list)
         *begin++ = e;
     }
     begin = begin - init_list.size();
-    return Shared<T>(begin);
+    i64 size = init_list.size();
+    return Shared<T>(begin,size);
 };

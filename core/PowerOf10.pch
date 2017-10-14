@@ -1,0 +1,33 @@
+// @v 1.6.0
+// @n Motus Lib
+// @a Armin Hamar
+// @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
+#pragma once
+#include "Types.pch"
+
+// Header
+#define MT_VERSION_1_6_0
+// Header
+
+i64 powerOf10(i8 exponent)
+{
+    switch(exponent)
+    {
+        case 1:
+            return 10;
+        case 2:
+            return 100;
+        case 3:
+            return 1000;
+        case 4:
+            return 10000;
+        case 5:
+            return 100000;
+    }
+    i64 num = 100000;
+    for(i64 i = 6; i <= exponent; ++i)
+    {
+        num *= 10;
+    }
+    return num;
+}

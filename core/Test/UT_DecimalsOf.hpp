@@ -3,7 +3,7 @@
 // @n Motus_Lib
 // @a Armin Hamar
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
-#include "DecimalsOf.pch"
+#include "Util.pch"
 #ifdef MT_VERSION_1_5_0
 #undef TEST
 #define TEST(METHOD) if(!METHOD())
@@ -11,7 +11,7 @@
 bool UT_decimals_ref_i64()
 {
     i64 test_number = 24;
-    if(DecimalsOf(test_number) != 2)
+    if(decimalsOf(test_number) != 2)
     {
         return false;
     }
@@ -21,7 +21,7 @@ bool UT_decimals_ref_i64()
 
 bool UT_decimals_i64()
 {
-    if(DecimalsOf(435) != 3)
+    if(decimalsOf(435) != 3)
     {
         return false;
     }

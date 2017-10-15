@@ -3,14 +3,14 @@
 // @n Motus_Lib
 // @a Armin Hamar
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
-#include "PowerOf10.pch"
-#ifdef MT_VERSION_1_6_0
+#include "Util.pch"
+#ifdef MT_VERSION_1_5_0
 #undef TEST
 #define TEST(METHOD) if(!METHOD())
 
 bool UT_PowerTest()
 {
-    if(PowerOf10(7) != 10000000)
+    if(powerOf10(7) != 10000000)
     {
         return false;
     }

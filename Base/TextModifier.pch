@@ -1,0 +1,32 @@
+// @v 1.7.0
+// @n Motus Lib
+// @a Armin Hamar
+// @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
+#pragma once
+
+#include "Types.pch"
+
+// Header
+#define MT_VERSION_1_7_0
+// Header
+
+void skipSpace(char*& text)
+{
+    while(*text == 32) text++;
+}
+
+void skipNewline(char*& text)
+{
+    while(*text == 10) text++;
+    while(text[0] == 13 && text[1] == 10) text++;
+}
+
+void skipNewlineAndSpace(char*& text)
+{
+  while(*text == 32 || *text == 10 || (text[0] == 13 && text[1] == 10)) text++;
+}
+
+void skipNumber(char*& text)
+{
+    while(*text <= 57 && *text >= 48) text++;
+}

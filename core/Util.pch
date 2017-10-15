@@ -10,7 +10,7 @@
 // Header
 
 template<typename T>
-i32 DecimalsOf(T numberToCountDigits)
+i32 decimalsOf(T numberToCountDigits)
 {
     i32 digits = 0;
     while(true)
@@ -24,7 +24,6 @@ i32 DecimalsOf(T numberToCountDigits)
         numberToCountDigits /= 1000000;
         digits += 6;
     }
-    
     
     return 0;
 };

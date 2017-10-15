@@ -30,3 +30,23 @@ void skipNumber(char*& text)
 {
     while(*text <= 57 && *text >= 48) text++;
 }
+
+void skipFromAtoZandatoz(char*& text)
+{
+    while((*text <= 90 && *text >= 65)||(*text <= 122 && *text >= 97)) text++;
+}
+
+void skipFromAtoZ(char*& text)
+{
+    while(*text <= 90 && *text >= 65) text++;
+}
+
+void skipFromatoz(char*& text)
+{
+    while(*text <= 122 && *text >= 97) text++;
+}
+
+void skipChar(char*& text,const char toSkip)
+{
+    while(*text == toSkip) text++;
+}

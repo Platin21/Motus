@@ -23,6 +23,8 @@ using f32 = float;
 
 using Char = char;
 
+using FileHandle = int;
+
 #define MAX_i64  9223372036854775807
 #define MAX_i32  4294967295
 #define MAX_i16  32767

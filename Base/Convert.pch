@@ -99,6 +99,31 @@ i64 next_decimal_size(const Char* text)
     return count;
 }
 
+i64 decimal_size(const Char* text)
+{
+    i64 front;
+    i64 back;
+    if(text[0] == '-')
+    {
+        front = next_decimal_size(text+1);
+        front += 1;
+        back  = next_decimal_size(text+front);
+    }
+    else
+    {
+        front = next_decimal_size(text);
+        front += 1;
+        back = next_decimal_size(text+front);
+    };
+    return back + front;
+}
+
+i64 numeric_size(const Char* text)
+{
+    if(text[0] == '-') return next_decimal_size((text + 1)) + 1;
+    else return next_decimal_size(text);
+}
+
 template<typename T>
 void charptr_to_numeric_value(const Char *txt,T *result,i64 lenght = 0) {
     if(lenght == 0) lenght = next_decimal_size(txt);

@@ -41,6 +41,15 @@ public:
         return type_info;
     }
     
+    Shared(void* raw_memory)
+    {
+        type_info = (Shared_Info<T>*)malloc(sizeof(type_info));
+        type_info->origin = (T*)raw_memory;
+        type_info->refs = 0;
+        type_info->size = 0;
+        ptr = type_info->origin;
+    }
+    
     Shared(void* raw_memory,i64& size)
     {
         type_info = (Shared_Info<T>*)malloc(sizeof(type_info));

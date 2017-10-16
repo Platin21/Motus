@@ -50,3 +50,8 @@ void skipChar(char*& text,const char toSkip)
 {
     while(*text == toSkip) text++;
 }
+
+void skip(char*& text,i64 amount)
+{
+    for(;amount >= 0; --amount) ++text;
+}

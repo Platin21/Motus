@@ -19,7 +19,7 @@ public:
         ptr = raw_memory;
     }
     
-    T* ref() const
+    T* ref()
     {
         return ptr;
     }

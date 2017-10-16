@@ -52,3 +52,32 @@ bool CStringCompare(const char* string1,const char* string2)
     return true;
 }
 
+const char* CStringChain(char* destionation_string1,const char* string2)
+{
+    i64 string1_len = CStringLenghtOf(destionation_string1);
+    i64 string2_len = CStringLenghtOf(string2);
+    
+    if(string2_len == 1)
+    {
+      destionation_string1[string1_len+1] = string2[0];
+    }
+    else if(string2_len == 2)
+    {
+        destionation_string1[string1_len+1] = string2[0];
+        destionation_string1[string1_len+2] = string2[1];
+        destionation_string1[string1_len+2] = '\0';
+    }
+    
+    destionation_string1 += string1_len;
+    for(i64 i = 0; i < string2_len; ++i)
+    {
+        *destionation_string1 = *string2;
+        destionation_string1 += 1;
+        string2 += 1;
+    };
+    
+    
+    destionation_string1[1] = '\0';
+    return (destionation_string1 - (string1_len + string2_len));
+}
+

@@ -47,6 +47,7 @@ public:
         return false;
     }
     
+    //@todo rethink
     inline void move_forward(i64& by_elements)
     {
         if(is_elment_valid_at(by_elements))
@@ -56,6 +57,7 @@ public:
         }
     }
     
+    //@todo rethink
     inline void move_forward(i64&& by_elements)
     {
         if(is_elment_valid_at(by_elements))
@@ -86,7 +88,7 @@ public:
         return get();
     }
     
-    inline Range<T> subrange(i64 offset_begin,i64 offset_end)
+    inline Range<T> subrange(i64 offset_begin = 0,i64 offset_end = 0)
     {
         if(offset_end >= info.size)
             return Range<T>((info.begin+offset_begin),info.size);

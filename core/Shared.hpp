@@ -5,7 +5,7 @@
 #pragma once
 #include <cstdlib>
 #include <initializer_list>
-#include "Types.pch"
+#include "Types.hpp"
 
 // Header
 #define MT_VERSION_1_1_0

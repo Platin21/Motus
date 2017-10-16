@@ -2,13 +2,13 @@
 
 //#define MT_SPECIAL_DEF
 
-#include "Types.pch"
-#include "Shared.pch"
-#include "Range.pch"
-#include "Unique.pch"
-#include "Util.pch"
-#include "Convert.pch"
-#include "TextModifier.pch"
+#include "Types.hpp"
+#include "Shared.hpp"
+#include "Range.hpp"
+#include "Unique.hpp"
+#include "Util.hpp"
+#include "Convert.hpp"
+#include "TextModifier.hpp"
 
 #include <sys/types.h>
 #include <sys/stat.h>

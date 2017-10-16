@@ -4,8 +4,8 @@
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
 #pragma once
 
-#include "Types.pch"
-#include "Util.pch"
+#include "Types.hpp"
+#include "Util.hpp"
 
 // Header
 #define MT_VERSION_1_6_0

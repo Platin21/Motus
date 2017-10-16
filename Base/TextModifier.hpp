@@ -4,54 +4,64 @@
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
 #pragma once
 
-#include "Types.pch"
+#include "Types.hpp"
 
 // Header
 #define MT_VERSION_1_7_0
 // Header
 
-void skipSpace(char*& text)
+void StrSkipSpace(char*& text)
 {
     while(*text == 32) text++;
 }
 
-void skipNewline(char*& text)
+void StrSkipNewline(char*& text)
 {
     while(*text == 10) text++;
     while(text[0] == 13 && text[1] == 10) text++;
 }
 
-void skipNewlineAndSpace(char*& text)
+void StrSkipNewlineAndSpace(char*& text)
 {
   while(*text == 32 || *text == 10 || (text[0] == 13 && text[1] == 10)) text++;
 }
 
-void skipNumber(char*& text)
+void StrSkipNumber(char*& text)
 {
     while(*text <= 57 && *text >= 48) text++;
 }
 
-void skipFromAtoZandatoz(char*& text)
+void StrSkipFromAtoZandatoz(char*& text)
 {
     while((*text <= 90 && *text >= 65)||(*text <= 122 && *text >= 97)) text++;
 }
 
-void skipFromAtoZ(char*& text)
+void StrSkipFromAtoZ(char*& text)
 {
     while(*text <= 90 && *text >= 65) text++;
 }
 
-void skipFromatoz(char*& text)
+void StrSkipFromatoz(char*& text)
 {
     while(*text <= 122 && *text >= 97) text++;
 }
 
-void skipChar(char*& text,const char toSkip)
+void StrSkipChar(char*& text,const char toSkip)
 {
     while(*text == toSkip) text++;
 }
 
-void skip(char*& text,i64 amount)
+void StrSkip(char*& text,i64 amount)
 {
     for(;amount >= 0; --amount) ++text;
+}
+
+void StrSkipPrefix(char*& text,const char* in_text,i64 size)
+{
+
+}
+
+void StrSkipPostfix(char*& text,const char* in_text,i64 size)
+{
+    
 }

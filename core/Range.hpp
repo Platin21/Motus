@@ -3,7 +3,7 @@
 // @a Armin Hamar
 // @l https://www.binpress.com/license/view/l/dc100faf74fa8ba3d613f8255ae1ef73
 #pragma once
-#include "Types.pch"
+#include "Types.hpp"
 
 // Header
 #define MT_VERSION_1_2_0

@@ -44,15 +44,16 @@
 
 /* Begin PBXFileReference section */
 		8A479E631F92264A0086A9E0 /* UT_PowerOf10.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_PowerOf10.hpp; sourceTree = "<group>"; };
-		8A479E651F923ED10086A9E0 /* Convert.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Convert.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A479E651F923ED10086A9E0 /* Convert.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Convert.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A479E6A1F9284D20086A9E0 /* Debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Debug; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A52878E1F91337800570312 /* Util.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A52878E1F91337800570312 /* Util.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Util.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A52878F1F9163B900570312 /* UT_DecimalsOf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_DecimalsOf.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
-		8A5BB5FA1F858AC400511910 /* Range.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Range.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A5BB5FA1F858AC400511910 /* Range.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Range.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A62A4671F939517007DCCEB /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
-		8A62A4681F93B46C007DCCEB /* TextModifier.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextModifier.pch; sourceTree = "<group>"; };
-		8AB8FE041F86B825004DF71F /* Types.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
-		8AD41FB11F88FF1500AA97AD /* Unique.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unique.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8A62A4681F93B46C007DCCEB /* TextModifier.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextModifier.hpp; sourceTree = "<group>"; };
+		8A7B740E1F9537320031AA25 /* CString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CString.hpp; sourceTree = "<group>"; };
+		8AB8FE041F86B825004DF71F /* Types.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Types.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8AD41FB11F88FF1500AA97AD /* Unique.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Unique.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8AD41FB31F89066F00AA97AD /* UT_Shared.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Shared.hpp; sourceTree = "<group>"; };
 		8AD41FB41F8906B200AA97AD /* UT_Unique.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Unique.hpp; sourceTree = "<group>"; };
 		8AD41FB51F8906D600AA97AD /* UT_Range.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_Range.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
@@ -60,7 +61,7 @@
 		8AD41FBB1F8919A500AA97AD /* Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADAD6321F817D940041D98B /* Build */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Build; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ADAD6351F817D940041D98B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
-		8AEEC3C41F840307008EC951 /* Shared.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8AEEC3C41F840307008EC951 /* Shared.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shared.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +92,8 @@
 		8A479E641F923EAB0086A9E0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				8A479E651F923ED10086A9E0 /* Convert.pch */,
-				8A62A4681F93B46C007DCCEB /* TextModifier.pch */,
+				8A479E651F923ED10086A9E0 /* Convert.hpp */,
+				8A62A4681F93B46C007DCCEB /* TextModifier.hpp */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -143,11 +144,12 @@
 		8ADAD6341F817D940041D98B /* core */ = {
 			isa = PBXGroup;
 			children = (
-				8A52878E1F91337800570312 /* Util.pch */,
-				8AEEC3C41F840307008EC951 /* Shared.pch */,
-				8A5BB5FA1F858AC400511910 /* Range.pch */,
-				8AB8FE041F86B825004DF71F /* Types.pch */,
-				8AD41FB11F88FF1500AA97AD /* Unique.pch */,
+				8A52878E1F91337800570312 /* Util.hpp */,
+				8AEEC3C41F840307008EC951 /* Shared.hpp */,
+				8A5BB5FA1F858AC400511910 /* Range.hpp */,
+				8AB8FE041F86B825004DF71F /* Types.hpp */,
+				8AD41FB11F88FF1500AA97AD /* Unique.hpp */,
+				8A7B740E1F9537320031AA25 /* CString.hpp */,
 			);
 			path = core;
 			sourceTree = "<group>";

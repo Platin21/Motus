@@ -147,8 +147,8 @@ i64 CStringClusters(utf8Char* of_string)
     i64 len = CStringLenghtOf(of_string);
     for(i64 i = 0; i < len; i += 1)
     {
-        i64 offset_to_next_codepoint = CStringNextCodePointSize(of_string);
-        if(offset_to_next_codepoint == 4)
+        i64 cluster_offset = CStringNextCodePointSize(of_string);
+        if(cluster_offset == 4)
         {
             if(CStringIsNextCharRegionalIndicator(of_string,len - i))
             {
@@ -166,8 +166,8 @@ i64 CStringClusters(utf8Char* of_string)
         else
         {
             size += 1;
-            of_string  += offset_to_next_codepoint;
-            offset_in_string += offset_to_next_codepoint;
+            of_string  += cluster_offset;
+            offset_in_string += cluster_offset;
         }
         if(offset_in_string == len) return size;
     }

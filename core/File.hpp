@@ -14,10 +14,22 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+enum class Mode
+{
+    Read = 1,
+    Write = 2,
+    WriteNoAppend = 3
+};
+
+constexpr auto OpenForRead = Mode::Read;
+constexpr auto OpenForWrite = Mode::Write;
+constexpr auto OpenForWriteNoAppend = Mode::WriteNoAppend;
+
 class File
 {
     FileHandle   handle;
     i64 file_size;
+    Mode mode;
 public:
     File()
     {
@@ -25,9 +37,16 @@ public:
         handle = 0;
     }
     
-    File(const utf8Char* path)
+    File(const utf8Char* path,Mode m = OpenForRead)
     {
-        handle = open(Char(path),O_RDONLY);
+        if(m == Mode::Read)
+            handle = open(Char(path),O_RDONLY);
+        else if(m == Mode::Write)
+            handle = open(Char(path),O_WRONLY|O_APPEND);
+        else
+            handle = open(Char(path),O_WRONLY);
+        
+        mode = m;
         if(handle)
         {
             struct stat info;
@@ -48,7 +67,7 @@ public:
     
     void safelyReadContent(Unique<utf8Char>& to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to.ref(),size());
             to.ref()[size()+1] = '\0';
@@ -57,7 +76,7 @@ public:
     
     void safelyReadByte(Unique<utf8Char>& to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to.ref(),1);
             to.ref()[2] = '\0';
@@ -67,7 +86,7 @@ public:
     
     void readContent(Unique<utf8Char>& to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to.ref(),size());
             file_size = 0;
@@ -76,7 +95,7 @@ public:
     
     void readByte(Unique<utf8Char>& to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to.ref(),1);
             file_size -= 1;
@@ -86,7 +105,7 @@ public:
     //
     void safelyReadContent(utf8Char* to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to,size());
             to[size()+1] = '\0';
@@ -96,7 +115,7 @@ public:
     
     void safelyReadByte(utf8Char* to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to,1);
             to[2] = '\0';
@@ -106,7 +125,7 @@ public:
     
     void readContent(utf8Char* to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to,size());
             file_size = 0;
@@ -115,13 +134,23 @@ public:
     
     void readByte(utf8Char* to)
     {
-        if(handle != 0 && file_size != 0)
+        if(handle != 0 && file_size != 0 && mode == OpenForRead)
         {
             read(handle,to,1);
             file_size -= 1;
         }
     }
-    //
+    
+    //@b Fix this writting bug
+    void write(utf8Char& byte)
+    {
+        if(handle != 0 && file_size != 0 && mode == OpenForWrite)
+        {
+            if(::write(handle,&byte,1) != 1) return;
+            fsync(handle);
+            file_size += 1;
+        }
+    }
     
     ~File()
     {

@@ -43,7 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A40D01C1F993008007EE055 /* käse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "käse.txt"; sourceTree = "<group>"; };
+		8A40D01D1F99345C007EE055 /* File.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
+		8A40D01E1F9943F9007EE055 /* käse.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "käse.txt"; sourceTree = "<group>"; };
 		8A479E631F92264A0086A9E0 /* UT_PowerOf10.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_PowerOf10.hpp; sourceTree = "<group>"; };
 		8A479E651F923ED10086A9E0 /* Convert.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Convert.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A479E6A1F9284D20086A9E0 /* Debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Debug; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +103,8 @@
 		8A62A4661F9394C0007DCCEB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8A40D01C1F993008007EE055 /* käse.txt */,
 				8A62A4671F939517007DCCEB /* test.txt */,
+				8A40D01E1F9943F9007EE055 /* käse.txt */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -152,6 +153,7 @@
 				8AB8FE041F86B825004DF71F /* Types.hpp */,
 				8AD41FB11F88FF1500AA97AD /* Unique.hpp */,
 				8A7B740E1F9537320031AA25 /* CString.hpp */,
+				8A40D01D1F99345C007EE055 /* File.hpp */,
 			);
 			path = core;
 			sourceTree = "<group>";

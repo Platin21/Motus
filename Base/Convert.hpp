@@ -12,7 +12,7 @@
 // Header
 
 template<typename T>
-void number_to_cstr(T number, Char *destination,i32 decimals)
+void number_to_cstr(T number, utf8Char *destination,i32 decimals)
 {
     if (number == 0) {
         destination[0] = '0';
@@ -48,7 +48,7 @@ void number_to_cstr(T number, Char *destination,i32 decimals)
 
  // fix this
 template<typename T>
-void decimal_to_cstr(T dbl,Char* destination,i32 persicion = 4)
+void decimal_to_cstr(T dbl,utf8Char* destination,i32 persicion = 4)
 {
     i64 decimal_part = (i64)dbl;
     if(dbl == __builtin_inff())
@@ -85,7 +85,7 @@ void decimal_to_cstr(T dbl,Char* destination,i32 persicion = 4)
    
 }
 
-i64 next_decimal_size(const Char* text)
+i64 next_decimal_size(const utf8Char* text)
 {
     bool is_numeric = true;
     long count = 0;
@@ -99,7 +99,7 @@ i64 next_decimal_size(const Char* text)
     return count;
 }
 
-i64 decimal_size(const Char* text)
+i64 decimal_size(const utf8Char* text)
 {
     i64 front;
     i64 back;
@@ -118,14 +118,14 @@ i64 decimal_size(const Char* text)
     return back + front;
 }
 
-i64 numeric_size(const Char* text)
+i64 numeric_size(const utf8Char* text)
 {
     if(text[0] == '-') return next_decimal_size((text + 1)) + 1;
     else return next_decimal_size(text);
 }
 
 template<typename T>
-void charptr_to_numeric_value(const Char *txt,T *result,i64 lenght = 0) {
+void charptr_to_numeric_value(const utf8Char *txt,T *result,i64 lenght = 0) {
     if(lenght == 0) lenght = next_decimal_size(txt);
     if(txt[0] == '-')
     {
@@ -147,7 +147,7 @@ void charptr_to_numeric_value(const Char *txt,T *result,i64 lenght = 0) {
 }
 
 template<typename T>
-void charptr_to_decimal_value(const Char *txt,T *out) {
+void charptr_to_decimal_value(const utf8Char *txt,T *out) {
     i64 part = 0;
     i64 fpart = 0;
     if(txt[0] == '-')

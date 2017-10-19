@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A40D01B1F99292A007EE055 /* käse */ = {isa = PBXFileReference; lastKnownFileType = text; path = "käse"; sourceTree = "<group>"; };
 		8A479E631F92264A0086A9E0 /* UT_PowerOf10.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_PowerOf10.hpp; sourceTree = "<group>"; };
 		8A479E651F923ED10086A9E0 /* Convert.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Convert.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A479E6A1F9284D20086A9E0 /* Debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Debug; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8A62A4671F939517007DCCEB /* test.txt */,
+				8A40D01B1F99292A007EE055 /* käse */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -283,10 +285,12 @@
 			buildSettings = {
 				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9XHJ6AQ72;
 				OTHER_CFLAGS = "-g3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 			};
 			name = Debug;
 		};
@@ -295,11 +299,13 @@
 			buildSettings = {
 				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9XHJ6AQ72;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "-g3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
 			};
 			name = Release;
 		};

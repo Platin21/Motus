@@ -21,7 +21,7 @@ using u8  = unsigned char;
 using f64 = double;
 using f32 = float;
 
-using Char = char;
+using utf8Char = unsigned char;
 
 using FileHandle = int;
 

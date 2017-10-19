@@ -174,3 +174,12 @@ i64 CStringClusters(utf8Char* of_string)
     return size;
 }
 
+void CStringCopy(utf8Char* to,utf8Char* from,i64& len)
+{
+    for(i64 i = 0; i < len; ++i,++to,++from) *to = *from;
+}
+
+void CStringCopy(utf8Char* to,utf8Char* from,i64&& len)
+{
+   for(i64 i = 0; i < len; ++i,++to,++from) *to = *from;
+}

@@ -146,9 +146,20 @@ public:
     {
         if(handle != 0 && file_size != 0 && mode == OpenForWrite)
         {
-            if(::write(handle,&byte,1) != 1) return;
+            if(::write(handle,&byte,1) == -1) return;
             fsync(handle);
             file_size += 1;
+        }
+    }
+    
+    void write(utf8Char* bytes,i64 lenght)
+    {
+        if(handle != 0
+           && file_size != 0
+           && (mode == OpenForWrite||mode == OpenForWriteNoAppend))
+        {
+            if(::write(handle,bytes,lenght) == -1) return;
+            fsync(handle);
         }
     }
     

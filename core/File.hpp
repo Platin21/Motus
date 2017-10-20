@@ -60,6 +60,29 @@ public:
         }
     }
     
+    File(const utf8Char* path,const DirHandle dirHandle,Mode m = OpenForRead)
+    {
+        if(m == Mode::Read)
+            handle = openat(dirHandle,Char(path),O_RDONLY);
+        else if(m == Mode::Write)
+            handle = openat(dirHandle,Char(path),O_WRONLY|O_APPEND);
+        else
+            handle = openat(dirHandle,Char(path),O_WRONLY);
+        
+        mode = m;
+        if(handle)
+        {
+            struct stat info;
+            fstat(handle,&info);
+            file_size = info.st_size;
+        }
+        else
+        {
+            file_size = 0;
+            handle = 0;
+        }
+    }
+    
     const i64& size() const
     {
         return file_size;

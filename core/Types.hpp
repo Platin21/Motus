@@ -24,6 +24,7 @@ using f32 = float;
 using utf8Char = unsigned char;
 
 using FileHandle = int;
+using DirHandle = int;
 
 #define MAX_i64  9223372036854775807
 #define MAX_i32  4294967295

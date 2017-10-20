@@ -58,10 +58,10 @@ void StrSkip(char*& text,i64 amount)
 
 void StrSkipPrefix(char*& text,const char* in_text,i64 size)
 {
-
+    //
 }
 
 void StrSkipPostfix(char*& text,const char* in_text,i64 size)
 {
-    
+    //
 }

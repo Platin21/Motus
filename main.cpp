@@ -48,6 +48,73 @@ public:
     }
 };
 
+i16 hexCharToDecimal(utf8Char& c)
+{
+    switch(c)
+    {
+      case 48:
+        return 0;
+      case 49:
+        return 1;
+      case 50:
+        return 2;
+      case 51:
+        return 3;
+      case 52:
+        return 4;
+      case 53:
+        return 5;
+      case 54:
+        return 2;
+      case 55:
+        return 3;
+      case 56:
+        return 4;
+      case 57:
+        return 5;
+      case 58:
+        return 4;
+      case 59:
+        return 5;
+      case 60:
+        return 6;
+      case 61:
+        return 7;
+      case 62:
+        return 8;
+      case 63:
+        return 9;
+      case 'a':
+        return 10;
+      case 'b':
+        return 11;
+      case 'c':
+        return 12;
+      case 'd':
+        return 13;
+      case 'e':
+        return 14;
+      case 'f':
+        return 15;
+      default:
+        return 0;
+    }
+}
+
+class Color
+{
+    short Red,Green,Blue;
+public:
+    Color(short r,short g,short b): Red(r),Green(g),Blue(b) {};
+    Color(utf8Char* RGBhexColor)
+    {
+        u32 hexColor = 0;
+        Red   = ((hexColor >> 16) & 0xFF) / 255.0;  // get red
+        Green = ((hexColor >> 8) & 0xFF) / 255.0;   // get green
+        Blue  = ((hexColor) & 0xFF) / 255.0;        // get blue
+    }
+};
+
 int main(int argc, const char * argv[])
 {
     
@@ -55,6 +122,7 @@ int main(int argc, const char * argv[])
     utf8Char *t = UTF8("vec3(1.0,2.0,3.0)\n");
     
     f.write(t,CStringLenghtOf(t));
+    
     Directory d = Directory(UTF8("/Users/arminhamar/Dokumente/C++/core/Data/"));
     
     Unique<utf8Char> filename = make_unique<utf8Char>(30);

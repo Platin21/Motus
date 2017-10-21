@@ -35,8 +35,7 @@ int main(int argc, const char * argv[])
     
     printf("\n%s\n",content.ref());
     
-    Color c = UTF8("#4C99B2FA");
-    c.Negativ();
+    Color c = BRGA(234,253,345,0xFA);
     
     return 0;
 }

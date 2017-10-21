@@ -10,12 +10,30 @@
 #define MT_VERSION_1_10_0
 // Header
 
+#define RGB(r,g,b) Color(r,g,b)
+#define GBR(g,b,r) Color(r,g,b)
+#define BRG(b,g,r) Color(r,g,b)
+
+#define RGBA(r,g,b,a) Color(r,g,b,a)
+#define GBRA(g,b,r,a) Color(r,g,b,a)
+#define BRGA(b,r,g,a) Color(r,g,b,a)
 
 class Color
 {
     short Red,Green,Blue,Alpha;
 public:
-    Color(short r,short g,short b): Red(r),Green(g),Blue(b) {};
+    Color(short r = 255,short g = 255,short b = 255,short alpha = 255): Red(r),Green(g),Blue(b),Alpha(alpha)
+    {
+        if(Red >= MAX_RGB) Red = 255;
+        if(Green >= MAX_RGB) Green = 255;
+        if(Blue >= MAX_RGB) Blue = 255;
+        if(Alpha >= MAX_RGB) Alpha = 255;
+        
+        if(Red < 0) Red = 0;
+        if(Green < 0) Green = 0;
+        if(Blue < 0) Blue = 0;
+        if(Alpha < 0) Alpha = 1;
+    };
     Color(utf8Char* RGBhexColor)
     {
         if(RGBhexColor[0] == '#' && CStringLenghtOf(&RGBhexColor[1]) == 8)
@@ -36,7 +54,7 @@ public:
         }
     }
     
-    void Negativ()
+    void negate()
     {
         Red = MAX_RGB - Red;
         Green = MAX_RGB - Green;
@@ -84,46 +102,5 @@ public:
         Alpha = alpha;
     }
     // @g & @s
-    
-    void addColor(Color& c)
-    {
-        if((c.getRed() + Red) >= MAX_RGB)
-            setRed((c.getRed() + Red) - MAX_RGB);
-        else
-            setRed(c.getRed() + Red);
-        
-        if((c.getGreen() + Green) >= MAX_RGB)
-            setGreen((c.getGreen() + Green) - MAX_RGB);
-        else
-            setGreen(c.getGreen() + Green);
-        
-        if((c.getBlue() + Blue) >= MAX_RGB)
-            setBlue((c.getBlue() + Blue) - MAX_RGB);
-        else
-            setBlue(c.getBlue() + Blue);
-        
-        if((c.getAlpha() + Alpha) >= MAX_RGB)
-            setAlpha((c.getAlpha() + Alpha) - MAX_RGB);
-        else
-            setAlpha(c.getAlpha() + Alpha);
-    }
-    
-    void subColor(Color& c)
-    {
-        setRed(c.getRed() - Red);
-        setGreen(c.getGreen() - Green);
-        setBlue(c.getBlue() + Blue);
-        setAlpha(c.getAlpha() + Alpha);
-    }
-    
-    void operator+=(Color& c)
-    {
-        addColor(c);
-    }
-    
-    void operator-=(Color& c)
-    {
-        subColor(c);
-    }
     
 };

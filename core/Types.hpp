@@ -26,6 +26,7 @@ using utf8Char = unsigned char;
 using FileHandle = int;
 using DirHandle = int;
 
+#define MAX_RGB  255
 #define MAX_i64  9223372036854775807
 #define MAX_i32  4294967295
 #define MAX_i16  32767

@@ -59,10 +59,45 @@ double powerOf10(i8 exponent)
         case 5:
             return 100000;
     }
+    if(exponent <= -8) return 0;
     i64 num = 100000;
     for(i64 i = 6; i <= exponent; ++i)
     {
         num *= 10;
+    }
+    return num;
+}
+
+double powerOf16(i8 exponent)
+{
+    switch(exponent)
+    {
+        case -1:
+            return 0.0625;
+        case -2:
+            return 0.00390625;
+        case -3:
+            return 0.00390625;
+        case -4:
+            return 0.00001525878;
+        case 0:
+            return 1;
+        case 1:
+            return 16;
+        case 2:
+            return 256;
+        case 3:
+            return 4096;
+        case 4:
+            return 65536;
+        case 5:
+            return 1048576;
+    }
+    if(exponent <= -5) return 0;
+    i64 num = 1048576;
+    for(i64 i = 5; i <= exponent; ++i)
+    {
+        num *= 16;
     }
     return num;
 }

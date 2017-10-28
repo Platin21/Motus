@@ -21,13 +21,13 @@ enum class Mode
     WriteNoAppend = 3
 };
 
-constexpr auto OpenForRead = Mode::Read;
-constexpr auto OpenForWrite = Mode::Write;
-constexpr auto OpenForWriteNoAppend = Mode::WriteNoAppend;
+constexpr Mode OpenForRead = Mode::Read;
+constexpr Mode OpenForWrite = Mode::Write;
+constexpr Mode OpenForWriteNoAppend = Mode::WriteNoAppend;
 
 class File
 {
-    FileHandle   handle;
+    FileHandle  handle;
     i64 file_size;
     Mode mode;
 public:

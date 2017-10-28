@@ -28,10 +28,28 @@ public:
     {
         dent = readdir(dir);
         if(dent == nullptr) return false;
-        
-        i64 path_size = CStringLenghtOf(UTF8(dent->d_name));
-        if(!discard) CStringCopy(unique.ref(),UTF8(dent->d_name),path_size);
+        if(!discard)
+        {
+            i64 path_size = CStringLenghtOf(UTF8(dent->d_name));
+            CStringCopy(unique.ref(),UTF8(dent->d_name),path_size);
+        }
         return true;
+    }
+    
+    i64 getCountOfFilesInDir()
+    {
+        i64 files = 0;
+        while(readdir(dir) != nullptr)
+        {
+            files++;
+        }
+        rewinddir(dir);
+        return files;
+    }
+    
+    void skipFileInDir()
+    {
+        dent = readdir(dir);
     }
     
     void reset()

@@ -33,6 +33,11 @@ public:
         if(!discard) CStringCopy(unique.ref(),UTF8(dent->d_name),path_size);
     }
     
+    void reset()
+    {
+        rewinddir(dir);
+    }
+    
     DirHandle getDirHandle()
     {
         return dirfd(dir);

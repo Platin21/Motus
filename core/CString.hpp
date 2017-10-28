@@ -183,3 +183,13 @@ void CStringCopy(utf8Char* to,utf8Char* from,i64&& len)
 {
    for(i64 i = 0; i < len; ++i,++to,++from) *to = *from;
 }
+
+void CStringFillWith(utf8Char* to,utf8Char* from,i64& len)
+{
+    for(i64 i = 0; i < len; ++i,++to) *to = *from;
+}
+
+void CStringFillWith(utf8Char* to,utf8Char* from,i64&& len)
+{
+    for(i64 i = 0; i < len; ++i,++to) *to = *from;
+}

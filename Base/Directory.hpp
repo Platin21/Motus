@@ -24,13 +24,14 @@ public:
         if(dir == nullptr) return;
     }
     
-    void getFileInDir(Unique<utf8Char>& unique,bool discard = false)
+    bool getFileInDir(Unique<utf8Char>& unique,bool discard = false)
     {
         dent = readdir(dir);
-        if(dent == nullptr) return;
+        if(dent == nullptr) return false;
         
         i64 path_size = CStringLenghtOf(UTF8(dent->d_name));
         if(!discard) CStringCopy(unique.ref(),UTF8(dent->d_name),path_size);
+        return true;
     }
     
     void reset()

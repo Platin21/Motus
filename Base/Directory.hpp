@@ -29,23 +29,6 @@ public:
         dent = readdir(dir);
         if(dent == nullptr) return;
         
-        if(dent->d_name[0] == '.')
-        {
-            dent = readdir(dir);
-        }
-        
-        if(dent->d_name[0] == '.' && dent->d_name[1] == '.'){
-            dent = readdir(dir);
-        }
-        
-        if(dent->d_name[0] == '.'
-           && dent->d_name[1] == 'D'
-           && dent->d_name[2] == 'S'
-           && dent->d_name[3] == '_')
-        {
-            dent = readdir(dir);
-        }
-        
         i64 path_size = CStringLenghtOf(UTF8(dent->d_name));
         CStringCopy(unique.ref(),UTF8(dent->d_name),path_size);
     }

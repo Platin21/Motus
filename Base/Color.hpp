@@ -54,6 +54,22 @@ public:
         }
     }
     
+    Color(i32&& hexColor)
+    {
+        Red    = ((hexColor >> 32) & 0xFF);  // get red
+        Green  = ((hexColor >> 16) & 0xFF);  // get green
+        Blue   = ((hexColor >> 8) & 0xFF);   // get blue
+        Alpha  = ((hexColor) & 0xFF);        // get alpha
+    }
+    
+    Color(i32& hexColor)
+    {
+        Red    = ((hexColor >> 32) & 0xFF);  // get red
+        Green  = ((hexColor >> 16) & 0xFF);  // get green
+        Blue   = ((hexColor >> 8) & 0xFF);   // get blue
+        Alpha  = ((hexColor) & 0xFF);        // get alpha
+    }
+    
     void negate()
     {
         Red = MAX_RGB - Red;

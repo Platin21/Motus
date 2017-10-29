@@ -55,6 +55,32 @@ bool CStringCompare(const utf8Char* string1,const utf8Char* string2)
     return true;
 }
 
+bool CStringSubStringCompare(const utf8Char* string,const utf8Char* subStringToFind)
+{
+    i64 subStringLen = CStringLenghtOf(subStringToFind);
+    i64 stringLen = CStringLenghtOf(string);
+    
+    // "this is only a test"  -> "his is only a test" -> "is is only a test" ->
+    //  stringLen--              ->   stringLen--           ->    stringLen--
+    //  if(subStringLen <= stringLen)
+    // "test"
+    
+    while(subStringLen <= stringLen)
+    {
+        // -
+        subStringToFind++;
+        stringLen--;
+    }
+    
+    return false;
+}
+
+i64 CStringSubStringPos(const utf8Char* string,const utf8Char* substringToFind)
+{
+  //
+    return i64();
+}
+
 const utf8Char* CStringChain(utf8Char* destionation_string1,const utf8Char* string2)
 {
     i64 string1_len = CStringLenghtOf(destionation_string1);

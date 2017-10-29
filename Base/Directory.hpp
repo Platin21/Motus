@@ -16,7 +16,6 @@ class Directory
 {
 private:
     DIR *dir;
-    struct dirent *dent;
 public:
     Directory(utf8Char* path)
     {
@@ -26,7 +25,7 @@ public:
     
     bool getFileInDir(Unique<utf8Char>& unique,bool discard = false)
     {
-        dent = readdir(dir);
+        struct dirent *dent = readdir(dir);
         if(dent == nullptr) return false;
         if(!discard)
         {
@@ -34,6 +33,17 @@ public:
             CStringCopy(unique.ref(),UTF8(dent->d_name),path_size);
         }
         return true;
+    }
+    
+    bool isFileInDir(utf8Char* filename)
+    {
+      struct dirent *dent = readdir(dir);
+      while(dent != nullptr)
+      {
+          if(CStringCompare(filename,UTF8(dent->d_name))) return true;
+          dent = readdir(dir);
+      }
+      return false;
     }
     
     i64 getCountOfFilesInDir()
@@ -49,7 +59,7 @@ public:
     
     void skipFileInDir()
     {
-        dent = readdir(dir);
+      readdir(dir);
     }
     
     void reset()

@@ -51,7 +51,7 @@
 		8A52878F1F9163B900570312 /* UT_DecimalsOf.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UT_DecimalsOf.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A5BB5FA1F858AC400511910 /* Range.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Range.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8A62A4671F939517007DCCEB /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
-		8A62A4681F93B46C007DCCEB /* TextModifier.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextModifier.hpp; sourceTree = "<group>"; };
+		8A62A4681F93B46C007DCCEB /* ASCIITextModifier.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ASCIITextModifier.hpp; sourceTree = "<group>"; };
 		8A77E3511F9BA07800E1C4E4 /* Color.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
 		8A77E3521F9BA15000E1C4E4 /* Directory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Directory.hpp; sourceTree = "<group>"; };
 		8A7B740E1F9537320031AA25 /* CString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CString.hpp; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				8A479E651F923ED10086A9E0 /* Convert.hpp */,
-				8A62A4681F93B46C007DCCEB /* TextModifier.hpp */,
+				8A62A4681F93B46C007DCCEB /* ASCIITextModifier.hpp */,
 				8A77E3511F9BA07800E1C4E4 /* Color.hpp */,
 				8A77E3521F9BA15000E1C4E4 /* Directory.hpp */,
 			);

@@ -10,7 +10,7 @@
 #include "CString.hpp"
 //@BASE
 #include "Convert.hpp"
-#include "TextModifier.hpp"
+#include "ASCIITextModifier.hpp"
 #include "File.hpp"
 #include "Color.hpp"
 #include "Directory.hpp"

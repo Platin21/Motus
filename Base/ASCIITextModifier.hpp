@@ -5,6 +5,7 @@
 #pragma once
 
 #include "Types.hpp"
+#include "CString.hpp"
 
 // Header
 #define MT_VERSION_1_7_0
@@ -56,12 +57,19 @@ void StrSkip(char*& text,i64 amount)
     for(;amount >= 0; --amount) ++text;
 }
 
-void StrSkipPrefix(char*& text,const char* in_text,i64 size)
+void StrSkipPrefix(const char* prefix,char* OutText,i64 OutTextSize)
 {
     //
 }
 
-void StrSkipPostfix(char*& text,const char* in_text,i64 size)
+void StrSkipPostfix(const char* prefix,char* OutText,i64 OutTextSize)
 {
     //
 }
+
+
+
+
+
+
+
